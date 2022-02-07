@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #ecf2f8;
+  padding: 10vw;
+  color: white;
+  min-height: 100vh;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 5vw;
+    display: grid;
+    place-items: center;
+  }
+}
+
+main {
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  max-width: 1500px;
+}
+@media screen and (min-width: 1200px) {
+  main {
+    grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
+  }
+}
+
+.card {
+  border-radius: 10px;
+  background-color: orange;
+  padding: 30px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+}
+.card .info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.card .info img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 40px;
+}
+.card .info .status {
+  opacity: 50%;
+}
+.card > p {
+  opacity: 70%;
+}
+.card > * + * {
+  margin-top: 20px;
+}
+.card1 {
+  background-color: #7541c8;
+  position: relative;
+  overflow: hidden;
+}
+.card1 img {
+  border: 3px solid #ae90df;
+}
+.card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 100px;
+  aspect-ratio: 1;
+  z-index: 0;
+  background: url("../images/bg-pattern-quotation.svg") no-repeat;
+}
+.card2 {
+  background-color: #48556a;
+}
+.card3, .card5 {
+  background-color: white;
+  color: #19212e;
+}
+.card4 {
+  background-color: #19212e;
+}
+.card4 img {
+  border: 3px solid #7541c8;
+}
+@media screen and (min-width: 1200px) {
+  .card1 {
+    grid-area: card1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card2 {
+    grid-area: card2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card3 {
+    grid-area: card3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card4 {
+    grid-area: card4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card5 {
+    grid-area: card5;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
